@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class AreaOfRectangle {
 
@@ -6,6 +8,7 @@ public class AreaOfRectangle {
         // Prints "Area of Rectangle" to the terminal window.
         System.out.println("\n");
 
+        NumberFormat nf = NumberFormat.getInstance(new Locale("en", "CA"));
         Scanner arsh = new Scanner(System.in);
 
         double area, perimeter, length, width;
@@ -23,8 +26,11 @@ public class AreaOfRectangle {
 
         System.out.println("\n\t\t* ~ ANSWER ~ * ");
 
-        System.out.println("\tArea of Rectangle = " + area);
-        System.out.println("\tPerimeter of Rectangle = " + perimeter);
+        String jet = nf.format(area);
+        System.out.println("\tArea of Rectangle = " + jet);
+
+        String jit = nf.format(perimeter);
+        System.out.println("\tPerimeter of Rectangle = " + jit);
 
             }
 
